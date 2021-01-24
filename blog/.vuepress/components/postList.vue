@@ -3,7 +3,7 @@
     <div v-for="post in posts" :key="post.title" class="post">
       <router-link tag="h2" :to="post.path" class="title">{{ post.frontmatter.title }}</router-link>
       <p class="date">{{ new Date(post.frontmatter.date).toDateString() }}</p>
-      <p>{{ post.frontmatter.description }}</p>
+      <p v-if="post.frontmatter.description">{{ post.frontmatter.description }}</p>
     </div>
   </div>
 </template>

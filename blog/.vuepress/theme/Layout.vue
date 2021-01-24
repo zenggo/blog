@@ -17,7 +17,9 @@
 
       <!-- Single post -->
       <div v-if="isSinglePost" class="single-post">
-        <div class="date">{{ new Date($page.frontmatter.date).toDateString() }}</div>
+        <div class="post-date">{{ new Date($page.frontmatter.date).toDateString() }}</div>
+        <h1 class="post-title">{{ $page.frontmatter.title }}</h1>
+        <div class="post-desc" v-if="$page.frontmatter.description">{{ $page.frontmatter.description }}</div>
         <Content/>
         <div class="comment-box"></div>
       </div>
@@ -113,7 +115,7 @@
     margin-bottom: 4rem;
   }
 
-  .single-post .date {
+  .single-post .post-date {
     font-size: 0.8rem;
     color: #555;
   }
@@ -160,6 +162,24 @@
     font-size: 0.8rem;
     padding: 0.05rem 0.25rem;
     font-weight: 400;
+  }
+
+  .comment-box {
+    margin-top: 3rem;
+  }
+
+  .comment-box a {
+    color: #000;
+  }
+
+  h1.post-title {
+    margin-bottom: 1rem;
+  }
+  .post-desc {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    text-align: right;
   }
 
 </style>

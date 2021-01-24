@@ -1,4 +1,5 @@
 const config = require('../config.json');
+console.log(process.env.appId)
 module.exports = {
   title: config.title,
   description: config.description,
@@ -15,19 +16,20 @@ module.exports = {
       permalink: false
     }
   },
-  // plugins: [
-  //   [
-  //     'vuepress-plugin-comment',
-  //     {
-  //       choosen: 'valine', 
-  //       container: '.comment-box',
-  //       options: {
-  //         el: '#valine-vuepress-comment',
-  //         appId: 'J4Jz3WQxk7neVvab53kjgayb-gzGzoHsz',
-  //         appKey: '3PJM8Im3uqq6xQrQc93up9mH',
-  //         path: '<%- frontmatter.commentid || frontmatter.permalink %>'
-  //       }
-  //     }
-  //   ]
-  // ]
+  plugins: [
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        container: '.comment-box',
+        options: {
+          lang: 'en',
+          el: '#valine-vuepress-comment',
+          appId: process.env.appId,
+          appKey: process.env.appKey,
+          path: '<%- frontmatter.date + frontmatter.title %>'
+        }
+      }
+    ]
+  ]
 };

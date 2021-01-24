@@ -1,7 +1,6 @@
 ---
 title: ubuntu上mysql允许远程连接
 date: 2019-04-26 13:25:59
-description: 初探
 ---
 
 最近想用docker整理一个linux开发环境，打包需要的软件与配置，在本机起一个docker容器来跑server与mysql进行开发，部署时直接把dockerfile扔到机器上build一下即可。但在本机连接docker里的mysql时碰到了无法访问的问题，开始以为是docker的问题，后来发现与docker无关，就是mysql远程连接的问题。现象原因与解决方法如下：
