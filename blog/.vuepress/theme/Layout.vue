@@ -5,13 +5,8 @@
 
     <div class="container">
 
-      <!-- Works list -->
-      <div
-        v-if="$route.path === '/'"
-        :style="{
-          marginTop: '14vw'
-        }"
-      >
+      <!-- home -->
+      <div v-if="$route.path === '/'">
         <Content/>
       </div>
 
@@ -45,23 +40,23 @@
         }
       }
     },
-    updated() {
-        // unwrap all images from paragraph tags so we can have
-        // different widths inside the content.
+    // updated() {
+    //     // unwrap all images from paragraph tags so we can have
+    //     // different widths inside the content.
 
-        document.querySelectorAll('p img').forEach(image => {
-          var wrapper = image.parentNode
-          let children = wrapper.children
-          let fragment = document.createDocumentFragment()
+    //     document.querySelectorAll('p img').forEach(image => {
+    //       var wrapper = image.parentNode
+    //       let children = wrapper.children
+    //       let fragment = document.createDocumentFragment()
 
-          Array.from(children).forEach(child => {
-            fragment.appendChild(child)
-          })
+    //       Array.from(children).forEach(child => {
+    //         fragment.appendChild(child)
+    //       })
 
-          wrapper.parentNode.replaceChild(fragment, wrapper)
+    //       wrapper.parentNode.replaceChild(fragment, wrapper)
 
-        })
-    },
+    //     })
+    // },
   }
 </script>
 

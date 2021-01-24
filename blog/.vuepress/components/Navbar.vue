@@ -29,13 +29,14 @@
 
     <div class="brand">
       <router-link to="/">
-        <div
+        <!-- <img class="logo" src="/upload/logo.jpg"> -->
+        <span class="logo-text">@ZENGGO</span>
+        <!-- <div
           v-if="logo"
           class="logo"
           :style="{ backgroundImage: `url(${logo})`}"
           :title="$site.title"
-        />
-        <span v-else>{{ $site.title }}</span>
+        /> -->
       </router-link>
     </div>
 
@@ -126,15 +127,26 @@
     z-index: 10;
   }
 
+  .logo-text {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    font-style: italic;
+    font-size: 2rem;
+    font-family: serif;
+  }
+
   .logo {
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%,-50%);
   }
 

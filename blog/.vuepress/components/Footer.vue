@@ -11,9 +11,7 @@
     display: block;
     font-size: 0.8rem;
     text-align: right;
-    padding: 4rem 5vw;
-  }
-  .text a {
-    color: #035f02;
+    font-weight: 200;
+    padding: 2rem 2rem 0 0;
   }
 </style>
