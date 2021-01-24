@@ -1,7 +1,8 @@
 ---
-title: hello world
-date: 2021-01-23 17:49:28
-description: This works like expected, this text is only visible on the front page where all the posts are listed
+title: test
+date: 2021-01-23T17:49:28.000+00:00
+description: This works like expected, this text is only visible on the front page
+  where all the posts are listed
 
 ---
 # Content management and auto deployment for VuePress
