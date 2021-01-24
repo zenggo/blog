@@ -1,0 +1,26 @@
+{
+    "title": "ZENGGO",
+    "description": "BLOG",
+    "logo": "/upload/logo.svg",
+    "favicon": "favicon-32x32.png",
+    "navigation": [
+      {
+        "text": "Home",
+        "link": "/",
+        "position": "left",
+        "external": false
+      },
+      {
+        "text": "Github",
+        "link": "https://github.com/zenggo",
+        "position": "left",
+        "external": true
+      },
+      {
+        "text": "Blog",
+        "link": "/post/",
+        "position": "right",
+        "external": false
+      }
+    ]
+  }

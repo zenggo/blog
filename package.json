@@ -1,0 +1,16 @@
+{
+  "name": "zenggoblog",
+  "scripts": {
+    "build": "vuepress build blog",
+    "dev": "vuepress dev blog"
+  },
+  "author": "zenggo",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.5.4",
+    "webpack-dev-middleware": "3.7.2"
+  },
+  "devDependencies": {
+    "vuepress-plugin-comment": "^0.7.3"
+  }
+}
