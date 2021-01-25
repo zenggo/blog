@@ -20,7 +20,7 @@
 
 <style scoped>
   .wrapper{
-    margin: 10vw auto 0 auto;
+    margin: 8rem auto 0 auto;
     text-align: center;
   }
   .wrapper p {
