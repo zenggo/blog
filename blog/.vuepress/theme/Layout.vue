@@ -21,10 +21,18 @@
         <h1 class="post-title">{{ $page.frontmatter.title }}</h1>
         <div class="post-desc" v-if="$page.frontmatter.description">{{ $page.frontmatter.description }}</div>
         <Content/>
-        <div class="comment-box"></div>
+      </div>
+
+      <!-- comment and counter -->
+      <div id="valine-wrapper" :style="`display: ${isSinglePost ? 'block': 'none'}`">
+        <div :id="$route.path" class="leancloud_visitors" :data-flag-title="$page.frontmatter.title">
+            <em class="post-meta-item-text">Read: </em>
+            <i class="leancloud-visitors-count">1000000</i>
+        </div>
       </div>
 
     </div>
+
 
     <Footer v-if="$route.path === '/'" />
 
@@ -41,24 +49,7 @@
           return true
         }
       }
-    },
-    // updated() {
-    //     // unwrap all images from paragraph tags so we can have
-    //     // different widths inside the content.
-
-    //     document.querySelectorAll('p img').forEach(image => {
-    //       var wrapper = image.parentNode
-    //       let children = wrapper.children
-    //       let fragment = document.createDocumentFragment()
-
-    //       Array.from(children).forEach(child => {
-    //         fragment.appendChild(child)
-    //       })
-
-    //       wrapper.parentNode.replaceChild(fragment, wrapper)
-
-    //     })
-    // },
+    }
   }
 </script>
 
@@ -106,9 +97,9 @@
 
   .container {
     padding: 0 5vw;
-  }
+  /* }
 
-  .post-list, .single-post {
+  .post-list, .single-post { */
     width: 800px;
     max-width: 100%;
     margin: 0 auto;
@@ -179,6 +170,13 @@
     color: #555;
     font-size: 0.9rem;
     margin-bottom: 3rem;
+    text-align: right;
+  }
+
+  .leancloud_visitors {
+    color: #555;
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
     text-align: right;
   }
 

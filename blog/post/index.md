@@ -1,6 +1,6 @@
 ---
 post_index: true
 title: blogs
-comment: false
+# comment: false
 ---
 <PostList />

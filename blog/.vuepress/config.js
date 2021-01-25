@@ -21,13 +21,14 @@ module.exports = {
       'vuepress-plugin-comment',
       {
         choosen: 'valine', 
-        container: '.comment-box',
+        container: '#valine-wrapper',
         options: {
           lang: 'en',
           el: '#valine-vuepress-comment',
           appId: process.env.appId,
           appKey: process.env.appKey,
-          path: '<%- frontmatter.date + frontmatter.title %>'
+          path: '<%-window.location.pathname%>',
+          visitor: !!process.env.visitor // 阅读量统计
         }
       }
     ]

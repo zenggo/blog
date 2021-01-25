@@ -1,6 +1,6 @@
 ---
 works_index: true
 title: home
-comment: false
+# comment: false
 ---
 <Home />
