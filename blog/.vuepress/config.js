@@ -8,9 +8,9 @@ module.exports = {
     logo: config.logo,
     nav: config.navigation,
   },
-  head: [
-    ['link', { rel: "icon", href: config.favicon }]
-  ],
+  // head: [
+  //   ['link', { rel: "icon", href: config.favicon }]
+  // ],
   markdown: {
     anchor: {
       permalink: false
