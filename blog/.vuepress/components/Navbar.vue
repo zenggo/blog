@@ -29,8 +29,7 @@
 
     <div class="brand">
       <router-link to="/">
-        <!-- <img class="logo" src="/upload/logo.jpg"> -->
-        <span class="logo-text">@ZENGGO</span>
+        <span class="logo-text">@{{$site.title.toUpperCase()}}</span>
         <!-- <div
           v-if="logo"
           class="logo"

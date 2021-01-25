@@ -2,7 +2,7 @@
   <div class="wrapper">
     <p>zenggo的博客</p>
     <div class="img-wrapper">
-      <img class="homebg" src="/upload/blogbg.jpg">
+      <img class="homebg" src="/blogbg.jpg">
     </div>
     <p>“</p>
     <p>Snow flakes in January</p>

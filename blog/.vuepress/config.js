@@ -1,5 +1,5 @@
 const config = require('../config.json');
-console.log(process.env.appId)
+
 module.exports = {
   title: config.title,
   description: config.description,
